@@ -1,13 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('userForm').addEventListener("submit", async function (event) {
+    const token = localStorage.getItem("token");
+    if (token) {
+        window.location.replace("home.html");
+        return;
+    }
+    document.getElementById('loginForm').addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
-        let isLoginSuccessfull = false;
 
         if (!email || !password) {
             alert("Please enter Email & Password");
+            return;
         }
 
         try {
@@ -28,8 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(data);
 
             if (response.ok) {
+                localStorage.setItem("token", data.token);
+                localStorage.setItem("username", data.name);
                 alert("Login Sucessfull");
-                window.location.href = "home.html";
+                window.location.replace("home.html");
             } else {
                 alert(data.message);
             }

@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Accesshub - Login</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='login.css'> -->
-    <script src='js/login.js'></script>
+    <meta charset="utf-8">
+    <title>AccessHub - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <h2>Login</h2>
 
-    <form id="userForm">
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="password" required>
-        <button type="submit">Login</button>
-    </form>
-    
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2 class="auth-title">Welcome Back</h2>
+
+            <form id="loginForm" class="auth-form">
+                <input type="email" id="email" class="auth-input" placeholder="Email" required>
+                <input type="password" id="password" class="auth-input" placeholder="Password" required>
+                <button type="submit" class="auth-button">Login</button>
+            </form>
+
+            <p class="auth-footer">
+                Don’t have an account?
+                <a href="register.html" class="auth-link">Register</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
 </body>
 </html>

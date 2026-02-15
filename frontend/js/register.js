@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('userForm').addEventListener("submit", async function (event) {
+
+    const token = localStorage.getItem("token");
+    if (token) {
+        window.location.replace("home.html");
+        return;
+    }
+    
+    document.getElementById('registerForm').addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const name = document.getElementById('name').value.trim();
@@ -8,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!name || !email || !password) {
             alert("Please fill the form");
+            return;
         }
 
         try {

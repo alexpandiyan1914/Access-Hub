@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Accesshub - Home</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script> -->
+    <meta charset="utf-8">
+    <title>AccessHub - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <h1>Welcome to AccessHub Home Page</h1>  
+
+    <div class="home-container">
+        <div class="home-card">
+            <h1 class="home-title">Welcome to AccessHub !</h1>
+            <p class="home-user" id="welcomeUser"></p>
+
+            <p class="home-message">
+                Congratulations Your login worked perfectly.  <br>
+                Backend & Frontend handshake successful.  
+                Your data is encrypted, hashed, and living safely in the database like a VIP !
+            </p>
+
+            <button id="logout-btn" class="ld-button">Logout</button>
+            <button id="delete-acc" class="ld-button">Delete Account</button>
+        </div>
+    </div>
+
+    <script src="js/home.js"></script>
 </body>
 </html>
