@@ -13,10 +13,13 @@
             <h2 class="auth-title">Create Account</h2>
 
             <form id="registerForm" class="auth-form">
-                <input type="text" id="name" class="auth-input" placeholder="Username" required>
-                <input type="email" id="email" class="auth-input" placeholder="Email" required>
-                <input type="password" id="password" class="auth-input" placeholder="Password" required>
-                <button type="submit" class="auth-button">Register</button>
+                <input type="text" id="name" class="auth-input" placeholder="Username">
+                <span id="nameErr" class="error"></span>
+                <input type="text" id="email" class="auth-input" placeholder="Email">
+                <span id="emailErr" class="error"></span>
+                <input type="password" id="password" class="auth-input" placeholder="Password">
+                <span id="passErr" class="error"></span>
+                <button type="submit" class="auth-button" onclick="validateForm()">Register</button>
             </form>
 
             <p class="auth-footer">
