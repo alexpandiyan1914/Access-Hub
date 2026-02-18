@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('registerForm').addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        if(!validateForm){
+        if(!validateForm()){
             return;
         }
 
@@ -65,12 +65,12 @@ function validateForm() {
     passErr.innerText = "";
 
     if(!name){
-        nameErr.innerText = "*please enter name";
+        nameErr.innerText = "*Please enter name";
         isValid = false;
     }
 
     if(!mailRegex.test(email)){
-        emailErr.innerText = "*enter valid email";
+        emailErr.innerText = "*Enter valid email";
         isValid = false;
     }
 

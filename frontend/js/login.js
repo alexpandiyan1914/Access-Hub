@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
 
-        if(!validateForm){
+        if(!validateForm()){
             return;
         }
 
@@ -62,12 +62,12 @@ function validateForm() {
     passErr.innerText = "";
 
     if(!mailRegex.test(email)){
-        emailErr.innerText = "*enter valid email";
+        emailErr.innerText = "*Enter valid email";
         isValid = false;
     }
 
     if(!passwordRegex.test(password)){
-        passErr.innerText = "*enter password";
+        passErr.innerText = "*Enter valid password";
         isValid = false;
     }
 
